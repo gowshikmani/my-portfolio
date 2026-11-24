@@ -7,7 +7,7 @@ function JasheyIdentity() {
         <div className="jashey-section-heading">
           <div>
             <p className="jashey-eyebrow">
-              IDENTITY & PRINCIPLES / 02
+              IDENTITY & PRINCIPLES / 03
             </p>
 
             <h2>

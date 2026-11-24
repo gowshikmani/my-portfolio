@@ -2,12 +2,24 @@
 /* SKAMARA — Editorial landing page */
 
 .skamara-page {
+  position: relative;
   min-height: calc(100svh - 84px);
+}
+
+.skamara-page__logo {
+  position: absolute;
+  top: 8px;
+  left: 24px;
+  z-index: 10;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
 }
 
 /* Main hero */
 
 .skamara-hero {
+  position: relative;
   min-height: calc(100svh - 84px);
 
   display: flex;
@@ -71,6 +83,15 @@
   color: var(--color-body);
   font-size: 1rem;
   line-height: 1.8;
+}
+
+.skamara-hero__image {
+  width: 100%;
+  max-height: 360px;
+  aspect-ratio: 16 / 10;
+  margin-top: 32px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
 }
 
 /* Announcement */
@@ -161,6 +182,79 @@
   text-align: right;
 }
 
+/* Articles */
+
+.skamara-articles {
+  padding-block: 100px;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.skamara-articles__heading {
+  margin-bottom: 42px;
+}
+
+.skamara-articles__heading h2 {
+  margin-top: 18px;
+  color: var(--color-forest);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.skamara-articles__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.skamara-article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+}
+
+.skamara-article img {
+  width: 100%;
+  max-height: 220px;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 22px;
+  object-fit: cover;
+}
+
+.skamara-article h3 {
+  color: var(--color-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.skamara-article p,
+.skamara-articles__empty {
+  margin-top: 12px;
+  color: var(--color-body);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.skamara-article a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--color-forest);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.skamara-article a:hover {
+  color: var(--color-accent);
+}
+
 /* Tablet */
 
 @media (max-width: 900px) {
@@ -172,11 +266,22 @@
   .skamara-hero__announcement {
     padding: 25px;
   }
+
+  .skamara-articles__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* Mobile */
 
 @media (max-width: 650px) {
+  .skamara-page__logo {
+    top: 8px;
+    left: 16px;
+    width: 56px;
+    height: 56px;
+  }
+
   .skamara-hero {
     min-height: auto;
     padding-block: 55px 35px;
@@ -227,5 +332,17 @@
 
   .skamara-hero__signature {
     text-align: left;
+  }
+
+  .skamara-articles {
+    padding-block: 70px;
+  }
+
+  .skamara-articles__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skamara-article {
+    padding: 20px;
   }
 }

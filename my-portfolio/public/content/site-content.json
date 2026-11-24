@@ -1,0 +1,92 @@
+{
+  "founder": {
+    "pageTitle": "Meet the founder.",
+    "name": "Gowshik Manikandan",
+    "description": "The ideas, curiosity and work behind an independent creative identity.",
+    "portrait": "/founder-media/potrait/cover%20image.jpeg",
+    "highlightsTitle": "Highlights.",
+    "highlights": [
+      {
+        "id": "highlight-01",
+        "title": "A Memorable Moment",
+        "category": "Highlights",
+        "date": "2026",
+        "image": "/founder-media/highlights/test.jpeg",
+        "description": "A group moment at the Student Affairs Investiture Ceremony."
+      }
+    ]
+  },
+  "projects": {
+    "heroTitle": "Coming soon!",
+    "heroAccent": "Stay tuned!",
+    "heroDescription": "Ideas, experiments and projects connected to FIGK. More details will appear as they are ready.",
+    "sectionTitle": "Projects.",
+    "sectionDescription": "A growing collection of ideas and independent work.",
+    "items": [
+      {
+        "id": "project-01",
+        "name": "BAWSAQ",
+        "status": "TBA",
+        "image": ""
+      },
+      {
+        "id": "project-02",
+        "name": "Scoldish ML",
+        "status": "TBA",
+        "image": ""
+      },
+      {
+        "id": "project-03",
+        "name": "Aquity ML",
+        "status": "TBA",
+        "image": ""
+      },
+      {
+        "id": "project-04",
+        "name": "Portfolio",
+        "status": "",
+        "image": ""
+      }
+    ]
+  },
+  "jashey": {
+    "titleLine1": "Open source.",
+    "titleLine2": "Open possibilities.",
+    "description": "FIGK-JASHEY is an open-source development initiative where people can explore ideas, contribute and build together.",
+    "heroImage": "",
+    "approachLine1": "Built in the open.",
+    "approachLine2": "Shaped together.",
+    "projectsTitle": "JASHEY projects.",
+    "projects": [],
+    "approaches": [
+      {
+        "id": "explore",
+        "number": "01",
+        "title": "Explore",
+        "description": "Follow projects as they are introduced and discover the ideas, technologies and possibilities behind them."
+      },
+      {
+        "id": "contribute",
+        "number": "02",
+        "title": "Contribute",
+        "description": "Share code, documentation, feedback, testing and ideas. Different contributions can help projects grow."
+      },
+      {
+        "id": "build-together",
+        "number": "03",
+        "title": "Build together",
+        "description": "Learn, exchange perspectives and work together to improve open-source projects."
+      }
+    ]
+  },
+  "skamara": {
+    "title": "FIGK-SKAMARA",
+    "tagline": "Ideas expressed through words.",
+    "heroImage": "",
+    "announcementTitle": "Coming soon!",
+    "announcementDescription": "Articles will be published here.",
+    "announcementAccent": "More to come.",
+    "articlesTitle": "Articles.",
+    "articles": []
+  }
+}

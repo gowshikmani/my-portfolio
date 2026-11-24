@@ -1,11 +1,13 @@
 # React + Vite
 
-## Founder gallery
+## Private content editor
 
-Run `npm run dev` for the public client on port 5173. To use the private
-server-side gallery on port 7171, run `npm run preview`. It builds the app and
-starts a localhost-only server; uploaded images are stored in the ignored
-`.private-uploads/` directory and are not included in the public build.
+Run `npm run dev` for the public client on port 5173. Run `npm run preview` for
+the localhost-only editor on port 7171. In the editor, photo and title changes
+are staged until you save; saving publishes them to `public/content/`, which
+updates the local public client. Rebuild and deploy to publish changes to the
+hosted site. Unpublished image uploads are held in the ignored
+`.staged-uploads/` directory.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

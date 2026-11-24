@@ -1,41 +1,58 @@
 
 import { Link } from "react-router-dom";
 
-function JasheyHero() {
+function JasheyHero({ content }) {
   return (
     <section className="jashey-hero">
+      <img
+        className="jashey-page__logo"
+        src="/logos/jashey.png"
+        alt="JASHEY logo"
+      />
       <div className="container jashey-hero__inner">
 
         <p className="jashey-eyebrow">
           FIGK / ECOSYSTEM / JASHEY
         </p>
 
-        <h1>
-          Open source.
-          <span>Open possibilities.</span>
-        </h1>
+        <div
+          className={`jashey-hero__layout ${
+            content.heroImage ? "jashey-hero__layout--with-image" : ""
+          }`}
+        >
+          <div>
+            <h1>
+              {content.titleLine1}
+              <span>{content.titleLine2}</span>
+            </h1>
 
-        <p className="jashey-hero__description">
-          FIGK-JASHEY is an open-source development
-          initiative where people can explore ideas,
-          contribute and build together.
-        </p>
+            <p className="jashey-hero__description">{content.description}</p>
 
-        <div className="jashey-hero__actions">
-          <a
-            href="#jashey-approach"
-            className="jashey-button"
-          >
-            Discover JASHEY
-            <span>↓</span>
-          </a>
+            <div className="jashey-hero__actions">
+              <a
+                href="#jashey-approach"
+                className="jashey-button"
+              >
+                Discover JASHEY
+                <span>↓</span>
+              </a>
 
-          <Link
-            to="/ecosystem"
-            className="jashey-text-link"
-          >
-            Back to ecosystem →
-          </Link>
+              <Link
+                to="/ecosystem"
+                className="jashey-text-link"
+              >
+                Back to ecosystem →
+              </Link>
+            </div>
+          </div>
+
+          {content.heroImage && (
+            <img
+              className="jashey-hero__image"
+              src={content.heroImage}
+              alt=""
+            />
+          )}
         </div>
 
         <div className="jashey-hero__signature">

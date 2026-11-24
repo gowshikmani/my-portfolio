@@ -7,7 +7,7 @@ function JasheyClosing() {
       <div className="container jashey-closing__inner">
 
         <p className="jashey-eyebrow">
-          FIGK-JASHEY / 03
+          FIGK-JASHEY / 04
         </p>
 
         <h2>

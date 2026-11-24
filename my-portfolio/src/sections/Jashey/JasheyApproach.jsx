@@ -1,29 +1,5 @@
 
-const approaches = [
-  {
-    number: "01",
-    title: "Explore",
-    description:
-      "Follow projects as they are introduced and discover " +
-      "the ideas, technologies and possibilities behind them.",
-  },
-  {
-    number: "02",
-    title: "Contribute",
-    description:
-      "Share code, documentation, feedback, testing and " +
-      "ideas. Different contributions can help projects grow.",
-  },
-  {
-    number: "03",
-    title: "Build together",
-    description:
-      "Learn, exchange perspectives and work together " +
-      "to improve open-source projects.",
-  },
-];
-
-function JasheyApproach() {
+function JasheyApproach({ content }) {
   return (
     <section
       className="jashey-approach"
@@ -38,8 +14,8 @@ function JasheyApproach() {
             </p>
 
             <h2>
-              Built in the open.
-              <span>Shaped together.</span>
+              {content.approachLine1}
+              <span>{content.approachLine2}</span>
             </h2>
           </div>
 
@@ -52,10 +28,10 @@ function JasheyApproach() {
 
         <div className="jashey-approach__grid">
 
-          {approaches.map((item) => (
+          {content.approaches.map((item) => (
             <article
               className="jashey-approach__card"
-              key={item.number}
+              key={item.id}
             >
               <span className="jashey-approach__number">
                 {item.number}

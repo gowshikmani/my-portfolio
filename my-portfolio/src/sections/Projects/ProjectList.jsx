@@ -1,26 +1,4 @@
-const projects = [
-  {
-    number: "01",
-    name: "BAWSAQ",
-    status: "TBA",
-  },
-  {
-    number: "02",
-    name: "Scoldish ML",
-    status: "TBA",
-  },
-  {
-    number: "03",
-    name: "Aquity ML",
-    status: "TBA",
-  },
-  {
-    number: "04",
-    name: "Portfolio",
-  },
-];
-
-function ProjectList() {
+function ProjectList({ content }) {
   return (
     <section className="project-list">
       <div className="container">
@@ -31,25 +9,36 @@ function ProjectList() {
               THE PROJECT INDEX / 02
             </p>
 
-            <h2>Projects.</h2>
+            <h2>{content.sectionTitle}</h2>
           </div>
 
           <p>
-            A growing collection of ideas and
-            independent work.
+            {content.sectionDescription}
           </p>
         </div>
 
         <div className="project-list__items">
 
-          {projects.map((project) => (
+          {content.items.map((project, index) => (
             <article
               className="project-row"
-              key={project.number}
+              key={project.id}
             >
               <span className="project-row__number">
-                {project.number}
+                {String(index + 1).padStart(2, "0")}
               </span>
+
+              {project.image ? (
+                <img
+                  className="project-row__image"
+                  src={project.image}
+                  alt=""
+                />
+              ) : (
+                <div className="project-row__image-placeholder">
+                  Project photo
+                </div>
+              )}
 
               <h3>{project.name}</h3>
 

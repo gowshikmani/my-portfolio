@@ -1,4 +1,4 @@
-function ProjectsHero() {
+function ProjectsHero({ content }) {
   return (
     <section className="projects-hero">
       <div className="container projects-hero__inner">
@@ -8,14 +8,12 @@ function ProjectsHero() {
         </p>
 
         <h1>
-          Coming soon!
-          <span>Stay tuned!</span>
+          {content.heroTitle}
+          <span>{content.heroAccent}</span>
         </h1>
 
         <p className="projects-hero__description">
-          Ideas, experiments and projects connected
-          to FIGK. More details will appear as they
-          are ready.
+          {content.heroDescription}
         </p>
 
       </div>
