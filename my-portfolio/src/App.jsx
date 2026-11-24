@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import About from "./pages/About/About";
 import Ecosystem from "./pages/Ecosystem/Ecosystem";
 import Jashey from "./pages/Ecosystem/Jashey";
+import Skamara from "./pages/Ecosystem/Skamara";
 import "./App.css";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/ecosystem" element={<Ecosystem/>}/>
         <Route path="/ecosystem/jashey" element={<Jashey/>}/>
+        <Route path="ecosystem/skamara" element={<Skamara/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
