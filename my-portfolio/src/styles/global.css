@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@import "./variables.css";
+@import "./typography.css";
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body{
+    margin: 0;
+    min-width: 320px;
+    background: var(--color-background);
+}
+
+#root{
+    min-height:100vh;
+}
+
+img,svg{
+    display:block;
+    max-width: 100%;
+}
+
+.container{
+    width: min(
+        var(--container-width),
+        calc(100% - var(page-padding)*2)
+    );
+    margin-inline: auto;
+}
+
+.selection-label{
+    font-size: 0.75rem;
+    font-weight:600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.text-accent{
+    color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+    :root {
+        --page-padding: 5%;
+        --space-2xl: 80px;
+        --space-xl: 56px;
+    }
+}

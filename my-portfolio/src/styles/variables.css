@@ -1,0 +1,41 @@
+:root{
+    /*Backgrounds*/
+    --color-background: #f7f5ef;
+    --color-surface: #fffdf8;
+    --color-surface-secondary: #f0eee6;
+
+    /*Brand Colors*/
+    --color-forest: #234735;
+    --color-accent: #27885B;
+    
+    /*Typography colors*/
+    --color-heading: #26352d;
+    --color-body: #77766D;
+    --color-muted: #92958b;
+
+    /*Borders*/
+    --color-border: #e5e3da;
+
+    /*Typography*/
+    --font-heading: "Playfair Display", Georgia,serif;
+    --font-body: "Inter",Arial, sans-serif;
+
+    /*Layout*/
+    --container-width: 1200px;
+    --page-padding: 6%;
+
+    /*Spacing*/
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    --space-xl: 80px;
+    --space-2xl: 120px;
+
+    /*Borders and Effects*/
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --transmission:250ms ease;
+}
