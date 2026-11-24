@@ -1,20 +1,22 @@
-import Logo from "./components/Logo/Logo";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <main className="container section">
-      <Logo size={72} />
+    <>
+      <Navbar />
 
-      <p className="section-label">
-        Independent creative brand
-      </p>
+      <main id="home" className="container home-hero">
+        <p className="section-label">
+          Independent creative brand
+        </p>
 
-      <h1>Independent by identity.</h1>
+        <h1>Independent by identity.</h1>
 
-      <p>
-        A space for ideas, creativity and independent thinking.
-      </p>
-    </main>
+        <p>
+          A space for ideas, creativity and independent thinking.
+        </p>
+      </main>
+    </>
   );
 }
 
