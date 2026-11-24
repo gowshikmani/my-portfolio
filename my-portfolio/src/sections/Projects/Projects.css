@@ -1,0 +1,177 @@
+/* Shared typography */
+
+.projects-eyebrow {
+  color: var(--color-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* 01 — Hero */
+
+.projects-hero {
+  padding-block: 125px 110px;
+}
+
+.projects-hero__inner {
+  max-width: 1100px;
+}
+
+.projects-hero h1 {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 28px;
+
+  font-size: clamp(3.8rem, 8vw, 7.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.projects-hero h1 span {
+  color: var(--color-forest);
+}
+
+.projects-hero__description {
+  max-width: 550px;
+  margin-top: 28px;
+
+  color: var(--color-body);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+/* 02 — Project list */
+
+.project-list {
+  padding-block: 100px 125px;
+
+  background: var(--color-surface);
+  border-block: 1px solid var(--color-border);
+}
+
+.project-list__heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+
+  margin-bottom: 55px;
+}
+
+.project-list__heading h2 {
+  margin-top: 20px;
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.project-list__heading > p {
+  max-width: 290px;
+
+  color: var(--color-muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+/* Project rows */
+
+.project-list__items {
+  border-top: 1px solid var(--color-border);
+}
+
+.project-row {
+  display: grid;
+  grid-template-columns: 65px minmax(0, 1fr) 70px;
+  align-items: center;
+  gap: 20px;
+
+  min-height: 105px;
+  padding-block: 20px;
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition: padding var(--transition);
+}
+
+.project-row:hover {
+  padding-inline: 12px;
+}
+
+.project-row__number {
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.project-row h3 {
+  color: var(--color-heading);
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.project-row__status {
+  justify-self: end;
+
+  padding: 6px 10px;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+
+  color: var(--color-muted);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .projects-hero {
+    padding-block: 85px;
+  }
+
+  .projects-hero h1 {
+    font-size: clamp(3.2rem, 12vw, 4.8rem);
+  }
+
+  .projects-hero__description {
+    font-size: 0.9rem;
+  }
+
+  .project-list {
+    padding-block: 80px;
+  }
+
+  .project-list__heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+
+  .project-list__heading h2 {
+    font-size: 3rem;
+  }
+
+  .project-row {
+    grid-template-columns: 32px minmax(0, 1fr) auto;
+    gap: 12px;
+    min-height: 88px;
+  }
+
+  .project-row h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-row__status {
+    font-size: 0.6rem;
+    padding: 5px 7px;
+  }
+}
