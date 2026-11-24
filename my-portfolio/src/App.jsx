@@ -5,6 +5,7 @@ import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 import NotFound from "./pages/NotFound/NotFound";
 import About from "./pages/About/About";
+import Ecosystem from "./pages/Ecosystem/Ecosystem";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About/>}/>
+        <Route path="/ecosystem" element={<Ecosystem/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
