@@ -1,0 +1,6 @@
+.figk-logo {
+    display: block;
+    height: auto;
+    object-fit: contain;
+    flex-shrink: 0;
+}

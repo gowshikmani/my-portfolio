@@ -1,9 +1,10 @@
-
-import "./App.css";
+import Logo from "./components/Logo/Logo";
 
 function App() {
   return (
     <main className="container section">
+      <Logo size={72} />
+
       <p className="section-label">
         Independent creative brand
       </p>

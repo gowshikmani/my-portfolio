@@ -2,3 +2,7 @@
 /* FIGK application-level styles */
 
 /* Keep this file for styles specific to App.jsx. */
+main.container.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
