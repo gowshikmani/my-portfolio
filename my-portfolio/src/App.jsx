@@ -9,6 +9,7 @@ import Ecosystem from "./pages/Ecosystem/Ecosystem";
 import Jashey from "./pages/Ecosystem/Jashey";
 import Skamara from "./pages/Ecosystem/Skamara";
 import Projects from "./pages/Projects/Projects"
+import Founder from "./pages/Founder/Founder";
 import "./App.css";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/ecosystem/jashey" element={<Jashey/>}/>
         <Route path="/ecosystem/skamara" element={<Skamara/>}/>
         <Route path="/projects" element={<Projects/>}/>
+        <Route path="/founder" element={<Founder />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
