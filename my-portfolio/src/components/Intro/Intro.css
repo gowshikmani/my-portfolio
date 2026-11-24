@@ -1,0 +1,245 @@
+
+.figk-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background: var(--color-background);
+  overflow: hidden;
+}
+
+.figk-intro__scene {
+  position: relative;
+
+  width: min(88vw, 420px);
+  height: 360px;
+
+  display: grid;
+  place-items: center;
+}
+
+/* Shared stage layout */
+
+.figk-intro__clock,
+.figk-intro__brand {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  transition:
+    opacity 600ms ease,
+    transform 600ms ease,
+    visibility 0s linear 600ms;
+}
+
+/* Clock stage */
+
+.figk-intro__clock {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.figk-clock {
+  position: relative;
+
+  width: min(64vw, 248px);
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+
+  background: var(--color-surface);
+
+  box-shadow: 0 0 0 8px rgba(35, 71, 53, 0.025);
+}
+
+/* Clock markings */
+
+.figk-clock__dial {
+  position: absolute;
+  inset: 8px;
+
+  border-radius: 50%;
+
+  background: repeating-conic-gradient(
+    from -1.5deg,
+    rgba(35, 71, 53, 0.7) 0deg 0.55deg,
+    transparent 0.55deg 6deg
+  );
+
+  -webkit-mask: radial-gradient(
+    circle,
+    transparent 0 88%,
+    #000 89% 100%
+  );
+
+  mask: radial-gradient(
+    circle,
+    transparent 0 88%,
+    #000 89% 100%
+  );
+}
+
+/* Clock hands */
+
+.figk-clock__hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+
+  display: block;
+
+  border-radius: 999px;
+
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) rotate(var(--angle));
+}
+
+.figk-clock__hand--hour {
+  width: 4px;
+  height: 60px;
+  background: var(--color-forest);
+  z-index: 2;
+}
+
+.figk-clock__hand--minute {
+  width: 2.5px;
+  height: 87px;
+  background: var(--color-forest);
+  z-index: 3;
+}
+
+.figk-clock__hand--second {
+  width: 1.5px;
+  height: 103px;
+  background: #D52B32;
+  z-index: 4;
+}
+
+/* Center pivot */
+
+.figk-clock__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: var(--color-forest);
+
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+/* Brand reveal */
+
+.figk-intro__brand {
+  gap: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px) scale(0.98);
+}
+
+.figk-intro__wordmark {
+  margin-top: 20px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 4.5rem);
+
+  font-weight: 500;
+  letter-spacing: -0.055em;
+
+  color: var(--color-forest);
+  line-height: 1;
+}
+
+.figk-intro__byline {
+  margin-top: 12px;
+
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+  color: var(--color-muted);
+}
+
+/* Stage transition */
+
+.figk-intro--reveal .figk-intro__clock {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.92);
+}
+
+.figk-intro--reveal .figk-intro__brand {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+
+  transition:
+    opacity 650ms ease 120ms,
+    transform 650ms ease 120ms,
+    visibility 0s;
+}
+
+/* Skip button */
+
+.figk-intro__skip {
+  position: absolute;
+  right: 5%;
+  bottom: 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px 4px;
+
+  border: none;
+  background: transparent;
+
+  color: var(--color-body);
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+
+  transition: color var(--transition);
+}
+
+.figk-intro__skip:hover {
+  color: var(--color-forest);
+}
+
+.figk-intro__skip span {
+  transition: transform var(--transition);
+}
+
+.figk-intro__skip:hover span {
+  transform: translateX(4px);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .figk-intro__clock,
+  .figk-intro__brand,
+  .figk-intro__skip,
+  .figk-intro__skip span {
+    transition: none !important;
+  }
+}

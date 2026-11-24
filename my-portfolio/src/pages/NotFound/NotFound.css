@@ -1,0 +1,155 @@
+
+.not-found {
+  min-height: calc(100svh - 84px);
+
+  display: flex;
+  align-items: center;
+
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.not-found__layout {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+  gap: clamp(40px, 8vw, 110px);
+}
+
+/* Error number */
+
+.not-found__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.not-found__number {
+  font-family: var(--font-heading);
+  font-size: clamp(9rem, 20vw, 18rem);
+  font-weight: 500;
+  line-height: 0.8;
+  letter-spacing: -0.09em;
+
+  color: var(--color-forest);
+}
+
+.not-found__visual-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+
+  color: var(--color-accent);
+}
+
+/* Content */
+
+.not-found__content {
+  border-left: 1px solid var(--color-border);
+
+  padding-left: clamp(28px, 5vw, 70px);
+}
+
+.not-found__eyebrow {
+  margin-bottom: 26px;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+
+  color: var(--color-muted);
+}
+
+.not-found__content h1 {
+  max-width: 560px;
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 1.05;
+}
+
+.not-found__description {
+  max-width: 430px;
+
+  margin-top: 24px;
+
+  color: var(--color-body);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Homepage link */
+
+.not-found__home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-top: 36px;
+  padding-bottom: 9px;
+
+  border-bottom: 1px solid var(--color-forest);
+
+  color: var(--color-forest);
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  transition: color var(--transition);
+}
+
+.not-found__home-link span {
+  transition: transform var(--transition);
+}
+
+.not-found__home-link:hover {
+  color: var(--color-accent);
+}
+
+.not-found__home-link:hover span {
+  transform: translateX(5px);
+}
+
+/* Brand signature */
+
+.not-found__signature {
+  margin-top: 76px;
+
+  color: var(--color-muted);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+  .not-found {
+    min-height: calc(100svh - 72px);
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .not-found__layout {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .not-found__number {
+    font-size: clamp(9rem, 37vw, 14rem);
+  }
+
+  .not-found__content {
+    border-left: none;
+    border-top: 1px solid var(--color-border);
+    padding-left: 0;
+    padding-top: 36px;
+  }
+
+  .not-found__signature {
+    margin-top: 55px;
+  }
+}

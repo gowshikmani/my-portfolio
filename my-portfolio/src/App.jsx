@@ -1,8 +1,24 @@
+
+import { useCallback, useState } from "react";
+
+import Intro from "./components/Intro/Intro";
 import Navbar from "./components/Navbar/Navbar";
 
+import "./App.css";
+
 function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  const handleIntroComplete = useCallback(() => {
+    setShowIntro(false);
+  }, []);
+
   return (
     <>
+      {showIntro && (
+        <Intro onComplete={handleIntroComplete} />
+      )}
+
       <Navbar />
 
       <main id="home" className="container home-hero">
