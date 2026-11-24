@@ -23,15 +23,15 @@ function Navbar() {
       <div className="container navbar__inner">
 
         {/* Brand */}
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="navbar__brand"
-          aria-label="FIGK home"
+          aria-label="FIGK homepage"
           onClick={closeMenu}
         >
-          <Logo size={38} />
-          <span className="navbar__brand-name">FIGK.</span>
-        </a>
+  <Logo size={38} />
+  <span className="navbar__brand-name">FIGK.</span>
+</Link>
 
         {/* Desktop and mobile navigation */}
         <nav
