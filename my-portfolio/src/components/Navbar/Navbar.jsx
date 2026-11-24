@@ -1,14 +1,14 @@
-
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../Logo/Logo";
 import "./Navbar.css";
 
 const navigation = [
-  { label: "About", href: "#about" },
-  { label: "Ecosystem", href: "#ecosystem" },
-  { label: "Projects", href: "#projects" },
-  { label: "Founder", href: "#founder" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/about" },
+  { label: "Ecosystem", href: "/ecosystem" },
+  { label: "Projects", href: "/projects" },
+  { label: "Founder", href: "/founder" },
+  { label: "Contact", href: "/contact" },
 ];
 
 function Navbar() {
@@ -40,19 +40,18 @@ function Navbar() {
           }`}
           aria-label="Main navigation"
         >
-          {navigation.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              className={`navbar__link ${
-                item.label === "Contact"
-                  ? "navbar__link--contact"
-                  : ""
-              }`}
-              onClick={closeMenu}
-            >
-              {item.label}
-            </a>
+          {navigation.map((item) => (<Link
+  key={item.label}
+  to={item.href}
+  className={`navbar__link ${
+    item.label === "Contact"
+      ? "navbar__link--contact"
+      : ""
+  }`}
+  onClick={closeMenu}
+>
+  {item.label}
+</Link>
           ))}
         </nav>
 
