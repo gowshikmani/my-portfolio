@@ -116,6 +116,10 @@ function Skamara() {
                       <span>{article.author}</span>
                     )}
 
+                    {article.type && (
+                      <span>{article.type}</span>
+                    )}
+
                     {article.date && (
                       <time dateTime={article.date}>
                         {article.date}
