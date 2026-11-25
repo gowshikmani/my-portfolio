@@ -1,4 +1,7 @@
-/* Shared typography */
+
+/* =========================================
+   SHARED TYPOGRAPHY
+========================================= */
 
 .projects-eyebrow {
   color: var(--color-accent);
@@ -8,7 +11,10 @@
   text-transform: uppercase;
 }
 
-/* 01 — Hero */
+
+/* =========================================
+   01 — HERO
+========================================= */
 
 .projects-hero {
   padding-block: 125px 110px;
@@ -43,7 +49,10 @@
   line-height: 1.9;
 }
 
-/* 02 — Project list */
+
+/* =========================================
+   02 — PROJECT LIST
+========================================= */
 
 .project-list {
   padding-block: 100px 125px;
@@ -77,34 +86,44 @@
   line-height: 1.8;
 }
 
-/* Project rows */
+
+/* =========================================
+   03 — PROJECT ROWS
+========================================= */
 
 .project-list__items {
   margin: 0;
   padding: 0;
+
   list-style: none;
   border-top: 1px solid var(--color-border);
 }
 
 .project-row {
   display: grid;
-  grid-template-columns: 65px 112px minmax(0, 1fr);
+  grid-template-columns: 65px minmax(0, 1fr);
   align-items: center;
   gap: 20px;
 
-  min-height: 105px;
-  padding-block: 20px;
+  min-height: 125px;
+  padding: 25px 12px;
 
   border-bottom: 1px solid var(--color-border);
 
-  transition: padding var(--transition);
+  transition:
+    background-color var(--transition),
+    padding-inline var(--transition);
 }
 
 .project-row:hover {
-  padding-inline: 12px;
+  padding-inline: 20px;
+  background: var(--color-background);
 }
 
 .project-row__number {
+  align-self: start;
+  padding-top: 8px;
+
   color: var(--color-accent);
   font-size: 0.72rem;
   font-weight: 600;
@@ -126,6 +145,7 @@
 .project-row__content > p {
   max-width: 640px;
   margin-top: 8px;
+
   color: var(--color-muted);
   font-size: 0.88rem;
   line-height: 1.7;
@@ -135,28 +155,15 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-}
+  gap: 12px;
 
-.project-row__image,
-.project-row__image-placeholder {
-  width: 112px;
-  height: 74px;
-  border-radius: var(--radius-sm);
-  object-fit: cover;
-}
-
-.project-row__image-placeholder {
-  display: grid;
-  place-items: center;
-  background: var(--color-surface-secondary);
-  color: var(--color-muted);
-  font-size: 0.65rem;
-  text-align: center;
+  margin-top: 14px;
 }
 
 .project-row__status {
+  display: inline-flex;
+  align-items: center;
+
   padding: 6px 10px;
 
   border: 1px solid var(--color-border);
@@ -166,17 +173,33 @@
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .project-row__link {
   color: var(--color-accent);
+
   font-size: 0.75rem;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
+
+  transition: color var(--transition);
 }
 
-/* Mobile */
+.project-row__link:hover {
+  color: var(--color-forest);
+}
+
+.project-row__link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+
+/* =========================================
+   04 — MOBILE
+========================================= */
 
 @media (max-width: 650px) {
   .projects-hero {
@@ -199,6 +222,7 @@
     align-items: flex-start;
     flex-direction: column;
     gap: 18px;
+
     margin-bottom: 35px;
   }
 
@@ -207,15 +231,15 @@
   }
 
   .project-row {
-    grid-template-columns: 32px 68px minmax(0, 1fr);
+    grid-template-columns: 32px minmax(0, 1fr);
     gap: 12px;
-    min-height: 88px;
+
+    min-height: 100px;
+    padding: 22px 4px;
   }
 
-  .project-row__image,
-  .project-row__image-placeholder {
-    width: 68px;
-    height: 56px;
+  .project-row:hover {
+    padding-inline: 8px;
   }
 
   .project-row h3 {
@@ -227,7 +251,19 @@
   }
 
   .project-row__status {
-    font-size: 0.6rem;
     padding: 5px 7px;
+    font-size: 0.6rem;
+  }
+}
+
+
+/* =========================================
+   05 — REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-row,
+  .project-row__link {
+    transition: none;
   }
 }
