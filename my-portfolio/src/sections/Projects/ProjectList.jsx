@@ -40,13 +40,27 @@ function ProjectList({ content }) {
                 </div>
               )}
 
-              <h3>{project.name}</h3>
-
-              {project.status && (
-                <span className="project-row__status">
-                  {project.status}
-                </span>
-              )}
+              <div className="project-row__content">
+                <h3>{project.name}</h3>
+                {project.description && <p>{project.description}</p>}
+                <div className="project-row__details">
+                  {project.status && (
+                    <span className="project-row__status">
+                      {project.status}
+                    </span>
+                  )}
+                  {project.url && (
+                    <a
+                      className="project-row__link"
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      View project
+                    </a>
+                  )}
+                </div>
+              </div>
             </li>
           ))}
 

@@ -66,6 +66,22 @@ function Projects() {
                         updateItem("items", project.id, "name", value)
                       }
                     />
+                    <ContentTextField
+                      label="Project description"
+                      value={project.description || ""}
+                      multiline
+                      onChange={(value) =>
+                        updateItem("items", project.id, "description", value)
+                      }
+                    />
+                    <ContentTextField
+                      label="Project link"
+                      value={project.url || ""}
+                      inputType="url"
+                      onChange={(value) =>
+                        updateItem("items", project.id, "url", value)
+                      }
+                    />
                     <ContentImageField
                       label="Project photo"
                       value={project.image}
@@ -87,6 +103,8 @@ function Projects() {
                     addItem("items", {
                       id: `project-${crypto.randomUUID()}`,
                       name: "New project",
+                      description: "",
+                      url: "",
                       status: "",
                       image: "",
                     })

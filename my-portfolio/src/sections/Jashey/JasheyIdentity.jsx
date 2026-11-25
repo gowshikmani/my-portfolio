@@ -3,7 +3,6 @@ function JasheyIdentity() {
   return (
     <section className="jashey-identity">
       <div className="container">
-
         <div className="jashey-section-heading">
           <div>
             <p className="jashey-eyebrow">
@@ -18,8 +17,6 @@ function JasheyIdentity() {
         </div>
 
         <div className="jashey-identity__grid">
-
-          {/* Licensing */}
           <article className="jashey-identity__panel">
             <span className="jashey-identity__label">
               OUR LICENSING DIRECTION
@@ -28,22 +25,18 @@ function JasheyIdentity() {
             <h3>GNU licenses.</h3>
 
             <p>
-              JASHEY projects are intended to be
-              released under GNU licenses, reflecting
-              an interest in open-source development
-              and sharing.
+              JASHEY aims to follow GNU licensing
+              principles, encouraging open-source
+              development, sharing and collaboration.
             </p>
 
             <p>
-              The specific license will be identified
-              alongside each project when it is published.
+              The applicable license will be identified
+              alongside each project when published.
             </p>
-
           </article>
 
-          {/* Name story */}
           <article className="jashey-identity__secret">
-
             <span className="jashey-identity__label">
               A LITTLE SECRET
             </span>
@@ -54,9 +47,7 @@ function JasheyIdentity() {
               A name from the sea of my heart.
             </p>
 
-            <p>
-              The rest of the story?
-            </p>
+            <p>The rest of the story?</p>
 
             <strong>
               Top secret. Too personal.
@@ -65,11 +56,8 @@ function JasheyIdentity() {
             <span className="jashey-identity__footnote">
               Some stories are better left untold.
             </span>
-
           </article>
-
         </div>
-
       </div>
     </section>
   );

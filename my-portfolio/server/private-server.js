@@ -274,6 +274,11 @@ function validateContentSection(section, value, allowStaged) {
         return {
           id: requireId(record.id, `${label} ID`),
           name: text(record.name, `${label} title`, { max: 160 }),
+          description: text(record.description, `${label} description`, {
+            allowEmpty: true,
+            max: 1000,
+          }),
+          url: requireWebUrl(record.url, `${label} link`),
           status: text(record.status, `${label} status`, {
             allowEmpty: true,
             max: 80,

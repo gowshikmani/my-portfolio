@@ -26,24 +26,32 @@
       {
         "id": "project-01",
         "name": "BAWSAQ",
+        "description": "",
+        "url": "",
         "status": "TBA",
         "image": ""
       },
       {
         "id": "project-02",
         "name": "Scoldish ML",
+        "description": "",
+        "url": "",
         "status": "TBA",
         "image": ""
       },
       {
         "id": "project-03",
         "name": "Aquity ML",
+        "description": "",
+        "url": "",
         "status": "TBA",
         "image": ""
       },
       {
         "id": "project-04",
         "name": "Portfolio",
+        "description": "",
+        "url": "",
         "status": "",
         "image": ""
       }

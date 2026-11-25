@@ -6,7 +6,6 @@ function JasheyApproach({ content }) {
       id="jashey-approach"
     >
       <div className="container">
-
         <div className="jashey-section-heading">
           <div>
             <p className="jashey-eyebrow">
@@ -27,7 +26,6 @@ function JasheyApproach({ content }) {
         </div>
 
         <div className="jashey-approach__grid">
-
           {content.approaches.map((item) => (
             <article
               className="jashey-approach__card"
@@ -42,13 +40,11 @@ function JasheyApproach({ content }) {
               <p>{item.description}</p>
             </article>
           ))}
-
         </div>
 
         <p className="jashey-approach__invitation">
           Anyone can join and contribute.
         </p>
-
       </div>
     </section>
   );

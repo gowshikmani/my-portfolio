@@ -9,15 +9,17 @@ function JasheyHero({ content }) {
         src="/logos/jashey.png"
         alt="JASHEY logo"
       />
-      <div className="container jashey-hero__inner">
 
+      <div className="container jashey-hero__inner">
         <p className="jashey-eyebrow">
           FIGK / ECOSYSTEM / JASHEY
         </p>
 
         <div
           className={`jashey-hero__layout ${
-            content.heroImage ? "jashey-hero__layout--with-image" : ""
+            content.heroImage
+              ? "jashey-hero__layout--with-image"
+              : ""
           }`}
         >
           <div>
@@ -26,7 +28,9 @@ function JasheyHero({ content }) {
               <span>{content.titleLine2}</span>
             </h1>
 
-            <p className="jashey-hero__description">{content.description}</p>
+            <p className="jashey-hero__description">
+              {content.description}
+            </p>
 
             <div className="jashey-hero__actions">
               <a
@@ -34,7 +38,7 @@ function JasheyHero({ content }) {
                 className="jashey-button"
               >
                 Discover JASHEY
-                <span>↓</span>
+                <span aria-hidden="true">↓</span>
               </a>
 
               <Link
@@ -51,6 +55,7 @@ function JasheyHero({ content }) {
               className="jashey-hero__image"
               src={content.heroImage}
               alt=""
+              fetchPriority="high"
             />
           )}
         </div>
@@ -62,7 +67,6 @@ function JasheyHero({ content }) {
           <span>/</span>
           <span>COLLABORATION</span>
         </div>
-
       </div>
     </section>
   );
