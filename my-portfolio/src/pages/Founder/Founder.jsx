@@ -2,7 +2,7 @@
 import "./Founder.css";
 
 const founder = {
-  pageTitle: "Writer, Developer & AI/ML Enthusiast",
+  pageTitle: "The person Behind FIGK",
   name: "Gowshik Manikandan",
   description: "The person behind FIGK.",
 
