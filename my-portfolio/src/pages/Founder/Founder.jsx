@@ -22,7 +22,7 @@ const founder = {
     },
     {
       id: "highlight-02",
-      title: "A mere first time on stage",
+      title: "A Mere First Time On Stage",
       category: "Highlights",
       date: "2024",
       image: "/founder-media/highlights/els.jpeg",
