@@ -54,6 +54,8 @@ function Founder() {
         </p>
 
         <h3>{highlight.title}</h3>
+
+        <p>{highlight.description}</p>
       </div>
     </article>
   );
