@@ -1,11 +1,11 @@
-
 export const articles = [
   {
-    id: "article-1",
-    title: "Your article title",
+    id: "test-article",
+    title: "The Art of Independent Thinking",
     author: "Gowshik Manikandan",
     date: "2026-11-25",
-    description: "A short introduction to the article.",
-    url: "YOUR-LINKEDIN-ARTICLE-URL",
+    description:
+      "A sample article to test the SKAMARA publishing system.",
+    url: "",
   },
 ];
