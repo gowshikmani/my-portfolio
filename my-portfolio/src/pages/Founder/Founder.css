@@ -136,14 +136,24 @@
 .founder-gallery__grid {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 16px;
+  column-gap: 16px;
   margin-top: 36px;
+}
+
+.founder-gallery__column {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.founder-gallery__list {
+  display: none;
 }
 
 .founder-card {
   min-width: 0;
-  flex: 0 1 calc(50% - 8px);
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -213,11 +223,13 @@
 
 @media (max-width: 520px) {
   .founder-gallery__grid {
-    flex-direction: column;
+    display: none;
   }
 
-  .founder-card {
-    flex: none;
-    width: 100%;
+  .founder-gallery__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 36px;
   }
 }

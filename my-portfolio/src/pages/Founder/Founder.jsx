@@ -28,17 +28,36 @@ const founder = {
       image: "/founder-media/highlights/els.jpeg",
       description: "The first time aboard on stage with fun elements"
     },
-    {
-      id: "highlight-03",
-      title: "Full-Stack Development Certification",
-      category: "Certifications",
-      date: "2025",
-      
-    }
   ],
 };
 
+const highlightColumns = [
+  founder.highlights.filter((_, index) => index % 2 === 0),
+  founder.highlights.filter((_, index) => index % 2 === 1),
+];
+
 function Founder() {
+  const renderHighlight = (highlight) => (
+    <article className="founder-card" key={highlight.id}>
+      {highlight.image && (
+        <img
+          src={highlight.image}
+          alt={highlight.description || highlight.title}
+          className="founder-card__image"
+          loading="lazy"
+        />
+      )}
+
+      <div className="founder-card__details">
+        <p>
+          {highlight.category} · {highlight.date}
+        </p>
+
+        <h3>{highlight.title}</h3>
+      </div>
+    </article>
+  );
+
   return (
     <main className="founder-page">
       <section className="founder-hero">
@@ -78,29 +97,15 @@ function Founder() {
           </div>
 
           <div className="founder-gallery__grid">
-            {founder.highlights.map((highlight) => (
-              <article
-                className="founder-card"
-                key={highlight.id}
-              >
-                {highlight.image && (
-                  <img
-                    src={highlight.image}
-                    alt={highlight.description || highlight.title}
-                    className="founder-card__image"
-                    loading="lazy"
-                  />
-                )}
-
-                <div className="founder-card__details">
-                  <p>
-                    {highlight.category} · {highlight.date}
-                  </p>
-
-                  <h3>{highlight.title}</h3>
-                </div>
-              </article>
+            {highlightColumns.map((column, index) => (
+              <div className="founder-gallery__column" key={index}>
+                {column.map(renderHighlight)}
+              </div>
             ))}
+          </div>
+
+          <div className="founder-gallery__list">
+            {founder.highlights.map(renderHighlight)}
           </div>
         </div>
       </section>
