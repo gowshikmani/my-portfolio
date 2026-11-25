@@ -206,9 +206,9 @@ function Skamara() {
             <h2>{skamara.articlesTitle}</h2>
           </div>
           {skamara.articles.length ? (
-            <div className="skamara-articles__grid">
+            <ul className="skamara-articles__grid">
               {skamara.articles.map((article) => (
-                <article className="skamara-article" key={article.id}>
+                <li className="skamara-article" key={article.id}>
                   {article.image && (
                     <img src={article.image} alt="" />
                   )}
@@ -221,9 +221,9 @@ function Skamara() {
                   >
                     Read article <span aria-hidden="true">↗</span>
                   </a>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           ) : (
             <p className="skamara-articles__empty">
               Articles will be published here.

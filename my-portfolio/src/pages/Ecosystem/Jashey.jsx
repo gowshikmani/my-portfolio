@@ -174,9 +174,9 @@ function Jashey() {
             </p>
           </div>
           {jashey.projects.length ? (
-            <div className="jashey-projects__grid">
+            <ul className="jashey-projects__grid">
               {jashey.projects.map((project) => (
-                <article className="jashey-project" key={project.id}>
+                <li className="jashey-project" key={project.id}>
                   {project.image && (
                     <img src={project.image} alt="" />
                   )}
@@ -191,9 +191,9 @@ function Jashey() {
                       Explore project <span aria-hidden="true">↗</span>
                     </a>
                   )}
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           ) : (
             <p className="jashey-projects__empty">
               JASHEY projects will be shared here soon.

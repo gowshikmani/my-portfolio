@@ -17,10 +17,10 @@ function ProjectList({ content }) {
           </p>
         </div>
 
-        <div className="project-list__items">
+        <ul className="project-list__items">
 
           {content.items.map((project, index) => (
-            <article
+            <li
               className="project-row"
               key={project.id}
             >
@@ -47,10 +47,10 @@ function ProjectList({ content }) {
                   {project.status}
                 </span>
               )}
-            </article>
+            </li>
           ))}
 
-        </div>
+        </ul>
 
       </div>
     </section>
