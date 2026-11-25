@@ -10,7 +10,6 @@ function Contact() {
     <main className="contact-page">
       <ContactHero />
       <ContactMethods />
-      <ContactForm />
       <ContactClosing />
     </main>
   );
