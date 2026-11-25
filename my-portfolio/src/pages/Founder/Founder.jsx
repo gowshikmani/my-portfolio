@@ -28,6 +28,22 @@ const founder = {
       image: "/founder-media/highlights/els.jpeg",
       description: "The first time aboard on stage with fun elements"
     },
+    {
+      id: "highlight-03",
+      title: "Certifications in GeoSpatial Analysis",
+      category: "Certifications",
+      date: "2026",
+      image: "/founder-media/certifications/certificate1.jpeg",
+      description: "The Kaggle Certification for Geospatial Analysis."
+    },
+    {
+      id: "highlight-4",
+      title: "Certifications in Intro to Deep Learning",
+      category: "Certifications",
+      date: "2026",
+      image: "/founder-media/certifications/certificate2.jpeg",
+      description: "The Kaggle Certifications for the Introduction to Deep Learning"
+    }
   ],
 };
 
