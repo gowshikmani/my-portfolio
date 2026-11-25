@@ -10,6 +10,8 @@
     "preview": "npm run build && node server/private-server.js"
   },
   "dependencies": {
+    "lucide-react": "^1.79.0",
+    "motion": "^14.14.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-router-dom": "^7.18.6"
