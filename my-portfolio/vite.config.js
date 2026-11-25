@@ -4,8 +4,8 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import {
   existsSync,
-  mkdirSync,
-  cpSync,
+  readdirSync,
+  rmSync,
   statSync,
   createReadStream,
 } from "node:fs";
@@ -13,7 +13,7 @@ import { resolve, relative, sep, extname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const frontendDir = fileURLToPath(new URL(".", import.meta.url));
-const mediaDir = resolve(frontendDir, "public/founder-media");
+const mediaDir = resolve(frontendDir, "dist/founder-media");
 const outputDir = resolve(frontendDir, "dist");
 
 const mimeTypes = {
@@ -29,6 +29,18 @@ const mimeTypes = {
 function founderMediaPlugin() {
   return {
     name: "founder-media-library",
+
+    buildStart() {
+      if (!existsSync(outputDir)) {
+        return;
+      }
+
+      for (const entry of readdirSync(outputDir)) {
+        if (entry !== "founder-media") {
+          rmSync(resolve(outputDir, entry), { recursive: true, force: true });
+        }
+      }
+    },
 
     configureServer(server) {
       server.middlewares.use((req, res, next) => {
@@ -79,21 +91,6 @@ function founderMediaPlugin() {
         createReadStream(filePath).pipe(res);
       });
     },
-
-    closeBundle() {
-      if (!existsSync(mediaDir)) {
-        console.warn("Founder media library was not found.");
-        return;
-      }
-
-      mkdirSync(outputDir, { recursive: true });
-
-      cpSync(mediaDir, resolve(outputDir, "founder-media"), {
-        recursive: true,
-      });
-
-      console.log("Founder Media Library copied to dist.");
-    },
   };
 }
 
@@ -103,4 +100,7 @@ export default defineConfig({
     tailwindcss(),
     founderMediaPlugin(),
   ],
+  build: {
+    emptyOutDir: false,
+  },
 });

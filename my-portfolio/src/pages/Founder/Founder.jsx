@@ -20,6 +20,21 @@ const founder = {
       description:
         "A group moment at the Student Affairs Investiture Ceremony.",
     },
+    {
+      id: "highlight-02",
+      title: "A mere first time on stage",
+      category: "Highlights",
+      date: "2024",
+      image: "/founder-media/highlights/els.jpeg",
+      description: "The first time aboard on stage with fun elements"
+    },
+    {
+      id: "highlight-03",
+      title: "Full-Stack Development Certification",
+      category: "Certifications",
+      date: "2025",
+      
+    }
   ],
 };
 

@@ -9,6 +9,10 @@ lerna-debug.log*
 
 node_modules
 dist
+!/dist/
+/dist/*
+!/dist/founder-media/
+!/dist/founder-media/**
 dist-ssr
 *.local
 .staged-uploads/

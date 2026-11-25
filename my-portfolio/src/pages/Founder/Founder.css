@@ -134,13 +134,16 @@
 }
 
 .founder-gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
   margin-top: 36px;
 }
 
 .founder-card {
+  min-width: 0;
+  flex: 0 1 calc(50% - 8px);
   overflow: hidden;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -148,9 +151,9 @@
 }
 
 .founder-card__image {
+  display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  height: auto;
 }
 
 .founder-card__details {
@@ -210,6 +213,11 @@
 
 @media (max-width: 520px) {
   .founder-gallery__grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .founder-card {
+    flex: none;
+    width: 100%;
   }
 }
