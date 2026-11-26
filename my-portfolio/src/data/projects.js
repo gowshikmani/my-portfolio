@@ -11,6 +11,20 @@ export const projectsContent = {
 
   items: [
     {
+      id: "portfolio",
+      name: "Portfolio",
+      description: "The FIGK JASHEY's First Project which it helps to tell about the FIGK brand.",
+      status: "LIVE",
+      url: "",
+    },
+    {
+      id: "resq",
+      name: "RESQ",
+      description: "It used for the resturants to call the orders and sends directly to kitchen which the papers won't require to list the orders",
+      status: "In Progress (URL Will be receiving soon",
+      url: "",
+    },
+    {
       id: "bawsaq",
       name: "BAWSAQ",
       description: "",
@@ -29,13 +43,6 @@ export const projectsContent = {
       name: "Aquity",
       description: "",
       status: "TBA",
-      url: "",
-    },
-    {
-      id: "portfolio",
-      name: "Portfolio",
-      description: "",
-      status: "LIVE",
       url: "",
     },
     {
